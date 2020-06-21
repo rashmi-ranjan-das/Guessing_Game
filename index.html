@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>
+            NUMBER GUESSING GAME
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body><br><br>
+    <div id="form">
+        <h1 class="text-center extra">Welcome To The Guessing Game</h1><br><br><br>
+        <div class="text-center bdy">
+        <h2 class="text-white">RULES:</h2>
+        <ul>
+            <li>The Computer has a random number between 1 and 20.</li>
+            <li>As a beginner, You have 4 chances to guess the number.</li>
+            <li>Each time you guess a number you will know whether the number chosen by you is greater, smaller or equal.</li>
+            <li>If you guess the correct number you will WIN the game.</li>
+        </ul>
+        <h1 class="blink_me">ARE YOU READY TO GO???</h1><br>
+        <div > 
+            <label for="guessField">Enter a guess: </label> 
+            <input type = "text" id = "guessField" class = "guessField"> 
+            <input type = "submit" value = "Submit guess" 
+                   class = "guessSubmit" id = "submitguess"> 
+        </div><br>
+        <h2 id="check" class="blick_me"></h2> 
+       </div>   
+        <script type = "text/javascript"> 
+            var y = Math.floor(Math.random() * 20 + 1); 
+            var guess = 4; 
+              
+           document.getElementById("submitguess").onclick = function(){ 
+           var x = document.getElementById("guessField").value; 
+           if(guess == 1){
+            document.getElementById('form').remove();
+            document.body.style.backgroundImage="url('imgs/lost.gif')";
+           }
+           else if(x == y) 
+           {   
+               document.getElementById('form').remove();
+               document.body.style.backgroundImage="url('imgs/congrats.gif')";
+           } 
+           else if(x > y)
+           {     
+               guess--; 
+               document.getElementById('check').innerHTML="OOPS SORRY!! TRY A SMALLER NUMBER. You have "+guess+" Chances left."; 
+           } 
+           else if (x < y)
+           { 
+               guess--; 
+               document.getElementById('check').innerHTML="OOPS SORRY!! TRY A GREATER NUMBER. You have "+guess+" Chances left."; 
+           } 
+        } 
+        </script> 
+        </body> 
+        </html>
