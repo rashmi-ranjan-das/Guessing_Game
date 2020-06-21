@@ -40,14 +40,15 @@
               
            document.getElementById("submitguess").onclick = function(){ 
            var x = document.getElementById("guessField").value; 
-           if(guess == 1){
-            document.getElementById('form').remove();
-            document.body.style.backgroundImage="url('imgs/lost.gif')";
-           }
-           else if(x == y) 
-           {   
+           if(x==y){
                document.getElementById('form').remove();
                document.body.style.backgroundImage="url('imgs/congrats.gif')";
+            
+           }
+           else if(guess==1) 
+           {   
+               document.getElementById('form').remove();
+            document.body.style.backgroundImage="url('imgs/lost.gif')";
            } 
            else if(x > y)
            {     
