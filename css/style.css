@@ -1,0 +1,48 @@
+body{
+    background-image: url('../imgs/back1.jpg');
+    background-size: cover;
+}
+h1.extra{
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-weight: bolder;
+     color: #89ff00;
+}
+h1.extra:hover{
+    font-size: 300%;
+    transition: linear;
+    transition-timing-function: linear;
+    transition-duration: 2s;
+}
+.bdy{
+    text-align: center;
+	width: 50%;
+	position: relative;
+	left: 25%;
+	color: #ffffff;
+	font-style: italic;
+	font-size: 150%;
+}
+.blink_me {
+    animation: blinker 1s linear infinite;
+    color: #89ff00;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+.guessfield{
+    font-size: 20px; height: 30px; width: 70px; color: #111; border-radius: 40px; border: none; margin: 10px; outline: none; padding-left: 15px; background-color: #eee;
+
+}
+.guesssubmit{
+    font-size: 20px; height: 40px; width: 100px; color: #111; border-radius: 40px; border: none; margin: 10px; outline: none; padding: 15px; text-transform: uppercase; font-weight: bold; background-color: #ea907a;
+}
+.guesssubmit:hover{
+    cursor: pointer;
+}
+#check{
+    text-align: center;
+    color: lavender;
+}
